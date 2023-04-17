@@ -1,0 +1,514 @@
+/**
+*** SIMPLE GRID
+*** (C) ZACH COLE 2016
+**/
+
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+/* UNIVERSAL */
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  left: 0;
+  top: 0;
+  font-size: 100%;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  font-family: 'Varela Round', sans-serif;
+  font-size: large;
+  color: darkturquoise;
+  background-color: dimgray;
+}
+
+.light {
+  background-color: slategray;
+}
+
+.content {
+  width:100%;
+  padding: 1em;
+}
+
+.sectionHeading {
+  margin: 0 auto;
+  width:88%;
+}
+
+.clearfix {
+  overflow: auto;
+  zoom: 1;
+}
+
+/* Info START */
+.info {
+  /* image sourced from https://www.needpix.com/photo/download/844735/ */
+  background-image: url('../../../images/table-mountain_resized.jpg'); /* Author: nike159 (pixbay.com) */
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+}
+.info-left {
+  float: left;
+  padding: 6%;
+}
+
+.info-right {
+  float: right;
+  padding: 1em 6%;
+}
+
+.info-right img {
+  border-radius: 50%;
+  width:100%;
+  height: auto;
+  box-shadow: 0px 0px 10px 5px lightgrey;
+}
+/*---Info END---*/
+
+/*---Place START---*/
+.city {
+  margin: 0 auto;
+}
+
+ .city-left {
+  margin-top: 0% !important;
+  margin-left: 2% !important;
+  margin-right: 0% !important;
+} 
+
+.city-left img {
+  width: 100%;
+  max-width: 420px;
+  min-width: 150px;
+  height: auto;
+}
+
+.city-right {
+  margin-right: 5px !important;
+}
+/*---Place END---*/
+
+/*---Foreign Language START---*/
+figcaption {
+  font-style: italic;
+  font-size: small;
+}
+
+.language {
+  padding: 0% 6%;
+  width: 89% !important;
+  margin: 0 auto !important;
+}
+
+table {
+  border-collapse:separate;
+  border:solid dimgray 1px;
+  border-radius:15px;
+  width: 100%;
+  margin: 0.5em 0em;
+}
+
+td, th {
+  border-left:solid dimgray 1px;
+  border-top:solid dimgray 1px;
+}
+
+th {
+  border-top: none;
+}
+
+td:first-child, th:first-child {
+   border-left: none;
+}
+/*---Foreign Language END---*/
+
+/*---History START---*/
+h3 {
+  text-align: center;
+}
+.place {
+  display:flex;
+  width:90% !important;
+  margin: 0 auto;
+}
+
+.place img {
+  width:100%;
+  aspect-ratio: 4 / 3 ;
+  max-width: 225px;
+  max-height: 210px;
+  height: auto;
+  float: right;
+  margin: 0.4em;
+  box-shadow: 0px 0px 5px 3px lightgrey;
+}
+
+.one,.two,.three {
+  width:30% !important;
+  padding-right: 1em;
+}
+
+/*---History END---*/
+
+/* ROOT FONT STYLES */
+
+/** {
+  font-family: 'Varela Round', sans-serif;
+  color: #333447;
+  line-height: 1.5;
+}*/
+
+/* TYPOGRAPHY */
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.375rem;
+}
+
+h4 {
+  font-size: 1.125rem;
+}
+
+h5 {
+  font-size: 1rem;
+}
+
+h6 {
+  font-size: 0.875rem;
+}
+
+p {
+  font-size: 1.125rem;
+  font-weight: 200;
+  line-height: 1.8;
+}
+
+.font-light {
+  font-weight: 300;
+}
+
+.font-regular {
+  font-weight: 400;
+}
+
+.font-heavy {
+  font-weight: 700;
+}
+
+/* POSITIONING */
+
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
+.center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.justify {
+  text-align: justify;
+}
+
+/* ==== GRID SYSTEM ==== */
+
+.container {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.row {
+  position: relative;
+  width: 100%;
+}
+
+.row [class^="col"] {
+  float: left;
+  margin: 0.5rem 2%;
+  min-height: 0.125rem;
+}
+
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-10,
+.col-11,
+.col-12 {
+  width: 96%;
+}
+
+.col-1-sm {
+  width: 4.33%;
+}
+
+.col-2-sm {
+  width: 12.66%;
+}
+
+.col-3-sm {
+  width: 21%;
+}
+
+.col-4-sm {
+  width: 29.33%;
+}
+
+.col-5-sm {
+  width: 37.66%;
+}
+
+.col-6-sm {
+  width: 46%;
+}
+
+.col-7-sm {
+  width: 54.33%;
+}
+
+.col-8-sm {
+  width: 62.66%;
+}
+
+.col-9-sm {
+  width: 71%;
+}
+
+.col-10-sm {
+  width: 79.33%;
+}
+
+.col-11-sm {
+  width: 87.66%;
+}
+
+.col-12-sm {
+  width: 96%;
+}
+
+.row::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.hidden-sm {
+  display: none;
+}
+
+@media only screen and (min-width: 33.75em) {  /* 540px */
+  .container {
+    width: 80%;
+  }
+}
+
+@media only screen and (min-width: 45em) {  /* 720px */
+  .col-1 {
+    width: 4.33%;
+  }
+
+  .col-2 {
+    width: 12.66%;
+  }
+
+  .col-3 {
+    width: 21%;
+  }
+
+  .col-4 {
+    width: 29.33%;
+  }
+
+  .col-5 {
+    width: 37.66%;
+  }
+
+  .col-6 {
+    width: 46%;
+  }
+
+  .col-7 {
+    width: 54.33%;
+  }
+
+  .col-8 {
+    width: 62.66%;
+  }
+
+  .col-9 {
+    width: 71%;
+  }
+
+  .col-10 {
+    width: 79.33%;
+  }
+
+  .col-11 {
+    width: 87.66%;
+  }
+
+  .col-12 {
+    width: 96%;
+  }
+
+  .hidden-sm {
+    display: block;
+  }
+}
+@media(max-width:499px){
+  /* When the screen size is less than 499px */
+  .header{
+      display:none;
+  }
+  /* info section styling */
+  .info {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.info-left{
+    margin: 0 auto !important;
+    float: none !important;
+    padding: 0% 0%;
+    text-align: center;
+}
+
+.info-right {
+    margin: 0 auto !important;
+    float: none !important;
+    padding: 0% 0%;
+    text-align: center;
+}
+
+.info-right img {
+  float: none;
+  max-width: 130px;
+}
+}
+
+@media(min-width:500px) and (max-width:959px){
+  /* When the screen size is between 500px and 959px */
+
+  /* info section styling */
+  .info {
+      display: block;
+      width: 100%;
+      text-align: center;
+  }
+  
+  .info-left{
+      margin: 0 auto !important;
+      float: none !important;
+      padding: 0% 0%;
+      text-align: center;
+  }
+
+  .info-right {
+      margin: 0 auto !important;
+      float: none !important;
+      padding: 0% 0%;
+      text-align: center;
+  }
+
+  .info-right img {
+    float: none;
+    max-width: 150px;
+  }
+  /* City section styling */
+  .city {
+      display: block;
+      width: 100%;
+      margin: 0 auto;
+  }
+  .city-left {
+    width: 100% !important;
+    margin: 0 auto !important;
+  }
+  .city-left img {
+      min-width: 293px;
+      max-width: 670px;
+      float:left;
+  }
+
+  figcaption {
+      width:15em;
+      float:left;
+      padding-bottom: 1em;
+  }
+
+  .city-right{
+      margin: 0 auto !important;
+      /* width: 83%; */
+      float: none !important;
+  }
+  /* Language section styling */
+  .language {
+    width: 80% !important;
+    padding: 0px;
+    margin: 0 10% !important;
+  }
+  /* History section styling */
+  .place {
+      display:block;
+      width:100%;
+  }
+
+  .place img {
+      width:100%;
+      aspect-ratio: 4 / 3 ;
+      max-width: 160px;
+      max-height: 210px;
+      height: auto;
+      float: right;
+      margin: 0.5em;
+      box-shadow: 0px 0px 5px 3px lightgrey;
+  }
+
+  .one, .two ,.three {
+      width: 90% !important;
+      margin: 0 6% !important;
+  }
+
+  .two img {
+  float: left;
+  }
+}
+
+/*---Media Queries---*/
+@media only screen and (min-width: 60em) { /* 960px */
+  .container {
+    width: 75%;
+    max-width: 60rem;
+  }
+  .info-right img {
+    float:right;
+    max-width: 190px;
+  }
+}
